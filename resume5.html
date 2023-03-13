@@ -13,10 +13,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto+Slab&display=swap');
+
         body {
             background-color: #F1F1F1;
             font-family: 'Poppins', sans-serif;
-            
+            font-weight: 500;
+
         }
 
         article {
@@ -25,10 +27,18 @@
             width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            
 
 
 
+
+        }
+
+        p {
+            font-weight: 400;
+        }
+
+        a {
+            font-weight: 600;
         }
 
 
@@ -40,13 +50,18 @@
         }
 
         header {
-            text-align: center;
-            background-color: #22577A;
-            color: white;
-            padding: 15px 150px 15px 00px;
+            
+            
             /* float: left; */
 
 
+        }
+        .fold{
+           text-align: center;
+            background-color: #22577A;
+            color: white;
+            padding: 55px 150px 15px 00px; 
+            
         }
 
         header h1 {
@@ -54,14 +69,37 @@
             font-size: 46px;
         }
 
+        .sticky {
+   position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+  
+ 
+  
+}
+
         /* Style the top navigation bar */
         .navbar {
             display: flex;
             width: 100%;
-            background-color: #38A3A5;
+            background-color: #22577A;
             margin-bottom: 0px;
             border-radius: 0px;
+            
+        }
+
+        .menuitems{
+            text-align: center;
+            margin: auto 0px;
             padding-left: 200px;
+        }
+
+        .navbar #logo{
+            float: left;
+            margin-right: auto;
+            padding: 0px 15px;
+            color: white;
         }
 
         /* Style the navigation bar links */
@@ -94,17 +132,14 @@
             list-style: none;
         }
 
-        .menu {
-            
-            
-        }
+        .menu {}
 
         #ResumeImage {
-            position: inherit;
+            position:;
             display: inline-block;
 
             /* right: 25px; */
-            float: right;
+            float: ;
             /* margin: 0px 20px 0px 0px; */
             /* padding: 10px 10px 50px 10px; */
             border-radius: 150px;
@@ -128,16 +163,18 @@
         }
 
         .experience {
-            
+            padding: 30px 0px;
         }
 
-        .education {
-            
+        .main-sections {
+            padding: 30px 0px;
         }
 
-        #section1 {
-            
+        .sub-section {
+            padding: 10px 0px;
         }
+
+        #section1 {}
 
         #section2 {}
 
@@ -158,6 +195,10 @@
             background-color: #09161F;
             color: white;
         }
+
+        #icons{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -165,28 +206,33 @@
     <article>
         <header>
 
-            <img src="images\ruan3.jpg" width="175px" id="ResumeImage">
-            <h1>Ruan Mighail Pienaar</h1>
-            <p>Web Developer at Joshua Generation Church</p>
-             <h2>Resume</h2>
-          
-        </header>
-  <aside>
-                <div class="menu">
+            <aside>
+                
+                <div class="menu sticky">
+                    
 
+                    <div class="navbar">
+                        <h2 id="logo">Ruan Pienaar</h2>
+                        <div class="menuitems">
+                        <a href="#section1">Experience</a>
+                        <a href="#section2">Education</a>
+                        <a href="#section3">Skills</a>
+                        </div>
 
-
-                </div>
-               
-                <div class="navbar">
-                    <a href="#section1">Experience</a>
-                    <a href="#section2">Education</a>
-                    <a href="#section3">Skills</a>
-
-
+                    </div>
                 </div>
             </aside>
-        <div>
+</header>
+<div class="fold">
+            <img src="images\ruan3.jpg" width="175px" id="ResumeImage">
+            <!-- <h1>Ruan Mighail Pienaar</h1> -->
+            <h2>Resume</h2>
+            <p>Web Developer at Joshua Generation Church</p>
+            
+
+        </div>
+
+        
             <aside>
 
 
@@ -199,39 +245,46 @@
                         <h2 id="section1">Experience</h2>
                     </th>
                     <th class="contentpage">
-                        <div class="experience">
+                        <div class="main-sections">
 
                             <h3>Web Developer</h3>
-                            <h4><a href="http://joshgen.co.za/">Joshua Generation Church · Full-time</a></h4>
-                            <p>Feb 2015 - Jul 2020 · 5yrs 6mos</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore
-                                et
-                                dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex
-                                ea
-                                commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                eu fugiat
-                                nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit
-                                anim
-                                id
-                                est
-                                laborum.</p>
-
-                            <h3><a href="http://redpeak.co.za/">RED PEAK Design</a></h3>
-                            <p>Jul 2020 - Present · 2 yrs 8 mos</p>
-                            <p>I am the owner of Red Peak Design. I work with clients to create design and development
-                                solutions for
-                                their
-                                business. I put pride in each project and in seeing my clients establish their brands
-                                and business
-                                growth.
-                                Equipping businesses and people to take their business to the next peak.</p>
-
+                            <div class="sub-section">
+                                <h4><a href="http://joshgen.co.za/">Joshua Generation Church · Full-time</a></h4>
+                                <p>Feb 2015 - Jul 2020 · 5yrs 6mos</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore
+                                    et
+                                    dolore
+                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut
+                                    aliquip ex
+                                    ea
+                                    commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                    dolore
+                                    eu fugiat
+                                    nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit
+                                    anim
+                                    id
+                                    est
+                                    laborum.</p>
+                            </div>
+                            <div class="sub-section">
+                                <h4><a href="http://redpeak.co.za/">RED PEAK Design</a></h4>
+                                <p>Jul 2020 - Present · 2 yrs 8 mos</p>
+                                <p>I am the owner of Red Peak Design. I work with clients to create design and
+                                    development
+                                    solutions for
+                                    their
+                                    business. I put pride in each project and in seeing my clients establish their
+                                    brands
+                                    and business
+                                    growth.
+                                    Equipping businesses and people to take their business to the next peak.</p>
+                            </div>
                         </div>
                         <section>
                     </th>
@@ -241,42 +294,51 @@
                         <h2 id="section2">Education</h2>
                     </th>
                     <th class="contentpage">
-                        <div class="education">
-                            <h3><a href="https://theanimationschool.co.za/">The Animation School</a></h3>
-                            <p>National Certificate, Animation, Interactive Technology, Video Graphics and Special
-                                Effects</p>
-                            <h3>Commando Training Centre Royal Marines</h3>
-                            <p>The first weeks of training are spent learning basic skills that will be used later. This
-                                includes
-                                much
-                                time
-                                spent on the parade ground and on the rifle ranges. The long history of the Royal
-                                Marines is also
-                                highlighted
-                                through a visit to the Royal Marines Museum in Southsea, Hampshire. Physical training at
-                                this stage
-                                emphasizes
-                                all-round physical strength, endurance and flexibility in order to develop the muscles
-                                necessary to
-                                carry
-                                the
-                                heavy equipment a marine will use in an operational unit. Key milestones include a gym
-                                passout at
-                                week 9
-                                (not
-                                carried out with fighting order), a battle swimming test, and learning to do a "regain"
-                                (i.e. climb
-                                back
-                                onto a
-                                rope suspended over a water tank). Most of these tests are completed wearing fighting
-                                order of 32 lb
-                                (14.5
-                                kg)
-                                of Personal Load Carrying Equipment. Individual fieldcraft skills are also taught at
-                                this basic
-                                stage.
-                            </p>
-
+                        <div class="main-sections">
+                            <div class="sub-section">
+                                <h4><a href="https://theanimationschool.co.za/">The Animation School</a></h4>
+                                <p>National Certificate, Animation, Interactive Technology, Video Graphics and Special
+                                    Effects</p>
+                            </div>
+                            <div class="sub-section">
+                                <h4>Commando Training Centre Royal Marines</h4>
+                                <p>The first weeks of training are spent learning basic skills that will be used later.
+                                    This
+                                    includes
+                                    much
+                                    time
+                                    spent on the parade ground and on the rifle ranges. The long history of the Royal
+                                    Marines is also
+                                    highlighted
+                                    through a visit to the Royal Marines Museum in Southsea, Hampshire. Physical
+                                    training at
+                                    this stage
+                                    emphasizes
+                                    all-round physical strength, endurance and flexibility in order to develop the
+                                    muscles
+                                    necessary to
+                                    carry
+                                    the
+                                    heavy equipment a marine will use in an operational unit. Key milestones include a
+                                    gym
+                                    passout at
+                                    week 9
+                                    (not
+                                    carried out with fighting order), a battle swimming test, and learning to do a
+                                    "regain"
+                                    (i.e. climb
+                                    back
+                                    onto a
+                                    rope suspended over a water tank). Most of these tests are completed wearing
+                                    fighting
+                                    order of 32 lb
+                                    (14.5
+                                    kg)
+                                    of Personal Load Carrying Equipment. Individual fieldcraft skills are also taught at
+                                    this basic
+                                    stage.
+                                </p>
+                            </div>
                         </div>
                         </section>
                     </th>
@@ -287,14 +349,20 @@
                     </th>
                     <th class="contentpage">
                         <section>
+                            <div class="main-sections">
+                                <ul><div id="icons">
+                                    <img src="images/128/html.png"><img src="images/128/css.png"><img src="images/128/js.png"><img src="images/128/github.png"></div>
+                                    <li><p>HTML&CSS</p></li>
+                                    <li><p>Javascript</p></li>
+                                    <li><p>Git/Github</p></li>
+                                    <div id="icons"><img src="images/128/wordpress.png"><img src="images/128/ps.png"><img src="images/128/ai.png"><img src="images/128/trello.png"></div>
+                                    <li><p>Wordpress</p></li>
+                                    <li><p>Photoshop</p></li>
+                                    <li><p>Illustrator</p></li>
+                                    <li><p>Trello</p></li>
 
-                            <ul>
-                                <li>HTML&CSS</li>
-                                <li>Javascript</li>
-                                <li>Git/Github</li>
-                                <li>Wordpress</li>
-
-                            </ul>
+                                </ul>
+                            </div>
                         </section>
                     </th>
                 </tr>
