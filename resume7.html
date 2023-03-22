@@ -44,11 +44,9 @@
         }
       }
 
-      .fold {
-        text-align: center;
-        background-color: #22577a;
-        color: white;
-        padding: 55px 150px 15px 00px;
+      header {
+        padding: 5px;
+        /* float: left; */
       }
 
       header h1 {
@@ -57,7 +55,7 @@
       }
 
       .sticky {
-        position: fixed;
+        /* position: fixed; */
         top: 0;
         width: 100%;
         z-index: 100;
@@ -65,32 +63,40 @@
 
       /* Style the top navigation bar */
       .navbar {
-        display: flex;
-        width: 100%;
-        background-color: #22577a;
+        /* display: flex; */
+        width: inherit;
+        background-color: white;
         margin-bottom: 0px;
         border-radius: 0px;
+        position: fixed;
+        /* top: 0;
+            left: 0; */
+        /* width: 100%; */
+        z-index: 100;
+        display: flex;
       }
 
       .menuitems {
         text-align: center;
         margin: auto 0px;
         padding-left: 200px;
+        display: flex;
       }
 
       .navbar #logo {
         float: left;
         margin-right: auto;
         padding: 0px 15px;
-        color: white;
+        color: black;
       }
 
       /* Style the navigation bar links */
       .navbar a {
-        color: white;
+        color: black;
         padding: 14px 20px 0px 0px;
         text-decoration: none;
         text-align: center;
+        height: 100%;
       }
 
       /* Change color on hover */
@@ -115,18 +121,39 @@
         list-style: none;
       }
 
+      .fold {
+        text-align: center;
+        background-color: #22577a;
+        color: white;
+        padding: 105px 150px 15px 00px;
+        display: flex;
+        align-items: center;
+      }
+
+      .fold h1 {
+        font-size: 75px;
+      }
+
+      .profile_image {
+        border: #f1f1f1 solid 15p;
+        margin-right: 40px;
+      }
+
       #ResumeImage {
-        display: inline-block;
+        display: flex;
+        margin-bottom: 0px;
+        margin-left: 20px;
 
         /* right: 25px; */
 
         /* margin: 0px 20px 0px 0px; */
-        /* padding: 10px 10px 50px 10px; */
+        padding: 15px;
         border-radius: 150px;
-        background-color: white;
-        border: 0px solid #212020;
+        /* background-color: white; */
+        border: 8px solid white;
         transform: rotate(3deg);
-        z-index: 3;
+        /* z-index: 3; */
+        align-content: flex-start;
       }
 
       .sidebar {
@@ -164,24 +191,113 @@
 
       Footer {
         padding: 20px 50px;
-        height: 500px;
+        height: 650px;
         background-color: #09161f;
         color: white;
       }
 
-      #codeicons {
+      #icons {
         text-align: center;
+        display: flex;
+
+        justify-content: flex-start;
+      }
+
+      #icons img {
+        width: 100px;
+
+        padding: 0px 15px;
+      }
+
+      .backtotopimage {
+        width: 50px;
+        height: 50px;
+        filter: invert(99%) sepia(99%) saturate(99%) hue-rotate(0deg)
+          brightness(100%) contrast(100%);
+      }
+      .sticky {
+        width: 1190px;
+      }
+
+      .backtotop {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20%;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .backtotop.show {
+        display: block;
+        opacity: 1;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      form {
+        /* background-color: #f2f2f2; */
+        border-radius: 5px;
+        padding: 20px;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #000000;
+        border-radius: 4px;
+        resize: vertical;
+        color: black;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      button[type="submit"] {
+        background-color: #57cc99;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 100%;
+      }
+      button[type="submit"]:hover {
+        background-color: #419a73;
+      }
+      .success-message {
+        background-color: #dff0d8;
+        border: 1px solid #d6e9c6;
+        color: #3c763d;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      .error-message {
+        background-color: #f2dede;
+        border: 1px solid #ebccd1;
+        color: #a94442;
+        padding: 10px;
+        margin-top: 20px;
       }
     </style>
   </head>
 
   <body>
     <article>
-      <header>
+      <header id="back_to_top">
         <aside>
           <div class="menu sticky">
             <div class="navbar">
-              <h2 id="logo">Ruan Pienaar</h2>
+              <div id="logo">
+                <h2>Ruan Pienaar</h2>
+              </div>
               <div class="menuitems">
                 <a href="#section1">Experience</a>
                 <a href="#section2">Education</a>
@@ -192,10 +308,14 @@
         </aside>
       </header>
       <div class="fold">
-        <img src="images\ruan3.jpg" width="175px" id="ResumeImage" />
+        <div class="profile_image">
+          <img src="images\ruan3.jpg" width="195px" id="ResumeImage" />
+        </div>
         <!-- <h1>Ruan Mighail Pienaar</h1> -->
-        <h2>Resume</h2>
-        <p>Web Developer at Joshua Generation Church</p>
+        <div>
+          <h1>Resume</h1>
+          <p>Web Developer at Joshua Generation Church</p>
+        </div>
       </div>
 
       <aside></aside>
@@ -289,26 +409,40 @@
               <div class="main-sections">
                 <ul>
                   <div id="icons">
-                    <img src="images/128/html.png" /><img
-                      src="images/128/css.png"
-                    /><img src="images/128/js.png" /><img
-                      src="images/128/github.png"
-                    />
+                    <div class="icons-lines">
+                      <img src="images/128/html.png" />
+                      <p>HTML&CSS</p>
+                    </div>
+                    <div>
+                      <img src="images/128/css.png" />
+                      <p>CSS</p>
+                    </div>
+                    <div>
+                      <img src="images/128/js.png" />
+                      <p>JavaScript</p>
+                    </div>
+                    <div>
+                      <img src="images/128/github.png" />
+                      <p>Git/Github</p>
+                    </div>
+
+                    <div>
+                      <img src="images/128/wordpress.png" />
+                      <p>Wordpress</p>
+                    </div>
+                    <div>
+                      <img src="images/128/ps.png" />
+                      <p>Photoshop</p>
+                    </div>
+                    <div>
+                      <img src="images/128/ai.png" />
+                      <p>Illustrator</p>
+                    </div>
+                    <div>
+                      <img src="images/128/trello.png" />
+                      <p>Trello</p>
+                    </div>
                   </div>
-                  <li><p>HTML&CSS</p></li>
-                  <li><p>Javascript</p></li>
-                  <li><p>Git/Github</p></li>
-                  <div id="codeicons">
-                    <img src="images/128/wordpress.png" /><img
-                      src="images/128/ps.png"
-                    /><img src="images/128/ai.png" /><img
-                      src="images/128/trello.png"
-                    />
-                  </div>
-                  <li><p>Wordpress</p></li>
-                  <li><p>Photoshop</p></li>
-                  <li><p>Illustrator</p></li>
-                  <li><p>Trello</p></li>
                 </ul>
               </div>
             </section>
@@ -317,9 +451,61 @@
       </table>
 
       <footer>
-        <h2>Contact Details</h2>
-        <p><a href="https://www.linkedin.com/in/ruan3d/">Linkedin</a></p>
+        <div class="container">
+          <h1>Contact Me</h1>
+          <p><a href="https://www.linkedin.com/in/ruan3d/">Linkedin</a></p>
+          <form
+            id="contact-form"
+            method="POST"
+            action="https://formsubmit.co/ruanmpienaar@gmail.com"
+          >
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </footer>
     </article>
+    <div class="backtotop">
+      <a href="#back_to_top"
+        ><img class="backtotopimage" src="images/64/arrow_up_icon.png" /><img
+      /></a>
+    </div>
   </body>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const backtotop = document.querySelector(".backtotop");
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const threshold = windowHeight / 2;
+
+      if (scrollPosition > threshold) {
+        backtotop.classList.add("show");
+      } else {
+        backtotop.classList.remove("show");
+      }
+    });
+  </script>
 </html>
