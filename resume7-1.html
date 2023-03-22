@@ -244,6 +244,24 @@
         border-radius: 5px;
         padding: 20px;
       }
+      option {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #000000;
+        border-radius: 4px;
+        resize: vertical;
+        color: black;
+      }
+
+      select#purpose {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #000000;
+        border-radius: 4px;
+        resize: vertical;
+        color: black;
+      }
+
       input[type="text"],
       input[type="email"],
       textarea {
@@ -474,7 +492,16 @@
               name="email"
               placeholder="Enter your email"
               required
-            />
+            /><span class="required"> Required</span>
+            <label for="message">Purpose of Messaging</label>
+            <select id="purpose" name="purpose" required>
+              <option value="">--Please select a purpose--</option>
+              <option value="Hire">Hire</option>
+              <option value="Ask a Question">Question</option>
+              <option value="Recruiter">Mexico</option>
+              <option value="Head Hunting">UK</option>
+              <!-- Add more countries as needed --></select
+            ><span class="required"> Required</span>
             <label for="message">Message</label>
             <textarea
               id="message"
