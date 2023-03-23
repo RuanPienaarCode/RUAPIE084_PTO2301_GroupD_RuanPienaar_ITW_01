@@ -20,12 +20,22 @@
         background-color: #f1f1f1;
         font-family: "Poppins", sans-serif;
         font-weight: 500;
+
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin: 0px auto;
+      }
+
+      @media screen and (max-width: 650px) {
+        body {
+        }
       }
 
       article {
         border: 5px solid black;
         background-color: white;
-        width: 1200px;
+        /* width: 1200px; */
         margin-left: auto;
         margin-right: auto;
       }
@@ -40,12 +50,13 @@
 
       @media screen and (max-width: 700px) {
         article {
-          width: 95%;
+          margin-right: 5px;
+          margin-left: 5px;
         }
       }
 
       header {
-        padding: 5px;
+        padding: 0px;
         /* float: left; */
       }
 
@@ -64,9 +75,10 @@
       /* Style the top navigation bar */
       .navbar {
         /* display: flex; */
-        width: inherit;
+        width: 100%;
         background-color: white;
         margin-bottom: 0px;
+
         border-radius: 0px;
         position: fixed;
         /* top: 0;
@@ -124,10 +136,18 @@
       .fold {
         text-align: center;
         /* background-color: #22577a; */
-        background-image: url(images/image4.jpg);
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.245),
+            rgba(0, 0, 0, 0.244)
+          ),
+          url(images/image4.jpg);
         background-repeat: no-repeat;
         height: 100%;
+        width: 100%;
         background-size: cover;
+        background-color: #fff; /* backup color */
+        background-repeat: repeat; /* repeat the image */
+        background-position: center center; /* position the image in the center */
         color: white;
         padding: 105px 150px 15px 00px;
         /* display: flex; */
@@ -139,25 +159,27 @@
       }
 
       .profile_image {
-        border: #f1f1f1 solid 15p;
-        margin-right: 40px;
+        /* margin-right: 40px; */
+        display: flex;
+        justify-content: center; /* centers content horizontally */
+        align-items: center; /* centers content vertically */
       }
 
-      #ResumeImage {
+      #ResumeImage img {
         display: flex;
-        margin-bottom: 0px;
-        margin-left: 20px;
+        /* margin-bottom: 0px;
+        margin-left: 20px; */
 
         /* right: 25px; */
-
+        border: #f1f1f1 solid 15p;
         /* margin: 0px 20px 0px 0px; */
         padding: 0x;
-        border-radius: 150px;
+        border-radius: 250px;
         /* background-color: white; */
         border: 8px solid white;
-        transform: rotate(3deg);
+        /* transform: rotate(3deg); */
         /* z-index: 3; */
-        align-content: flex-start;
+        align-content: center;
       }
 
       .sidebar {
@@ -195,7 +217,7 @@
 
       Footer {
         padding: 20px 50px;
-        height: 650px;
+        height: 750px;
         background-color: #09161f;
         color: white;
       }
@@ -218,6 +240,7 @@
         height: 50px;
         filter: invert(99%) sepia(99%) saturate(99%) hue-rotate(0deg)
           brightness(100%) contrast(100%);
+        box-shadow: 5px 10px;
       }
       .sticky {
         width: 1190px;
@@ -331,7 +354,23 @@
       </header>
       <div class="fold">
         <div class="profile_image">
-          <img src="images\ruan3.jpg" width="195px" id="ResumeImage" />
+          <!-- <img src="images\ruan3.jpg" width="195px" id="ResumeImage" /> -->
+          <picture id="ResumeImage">
+            <!-- Original image for laptop-sized screens and bigger -->
+            <source
+              srcset="images\ruan2.jpg"
+              media="(min-width: 1024px)"
+              width="195px"
+            />
+            <!-- Head and shoulders image for tablet-sized screens -->
+            <source
+              srcset="images\ruan3.jpg"
+              media="(min-width: 768px)"
+              width="195px"
+            />
+            <!-- Face image for mobile-sized screens -->
+            <img src="images\ruan4.jpg" alt="Image of a person" width="195px" />
+          </picture>
         </div>
         <!-- <h1>Ruan Mighail Pienaar</h1> -->
         <div>
