@@ -1,113 +1,50 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Ruan Pienar Resume</title>
-    <meta name="description" content="" />
+    <title>Ruan Pienaar Resume</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto+Slab&display=swap");
-      OLD CSS body {
-        background-color: #f1f1f1;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-
-        display: flex;
-        align-items: center;
-        align-content: center;
-        margin: 0px auto;
+      * {
+        box-sizing: border-box;
       }
 
-      @media screen and (max-width: 650px) {
-        body {
-        }
+      /* Style the body */
+      body {
+        font-family: Arial;
+        margin: 0;
       }
 
-      article {
-        border: 5px solid black;
-        background-color: white;
-        /* width: 1200px; */
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      p {
-        font-weight: 400;
-      }
-
-      a {
-        font-weight: 600;
-      }
-
-      @media screen and (max-width: 700px) {
-        article {
-          margin-right: 5px;
-          margin-left: 5px;
-        }
-      }
-
-      header {
-        padding: 0px;
-        /* float: left; */
-      }
-
-      header h1 {
-        font-family: "Roboto Slab", serif;
-        font-size: 46px;
-      }
-
-      .sticky {
-        /* position: fixed; */
-        top: 0;
+      /* Header/logo Title */
+      .header {
+        padding: 60px;
+        text-align: center;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.245),
+            rgba(0, 0, 0, 0.244)
+          ),
+          url(images/image4.jpg);
+        background-repeat: no-repeat;
+        /* background: #1abc9c; */
+        height: 100%;
         width: 100%;
-        z-index: 100;
+        background-size: cover;
+        background-position: center center; /* position the image in the center */
+        color: white;
       }
 
       /* Style the top navigation bar */
       .navbar {
-        /* display: flex; */
-        width: 100%;
-        background-color: white;
-        margin-bottom: 0px;
-
-        border-radius: 0px;
-        position: fixed;
-        /* top: 0;
-            left: 0; */
-        /* width: 100%; */
-        z-index: 100;
         display: flex;
-      }
-
-      .menuitems {
-        text-align: center;
-        margin: auto 0px;
-        padding-left: 200px;
-        display: flex;
-      }
-
-      .navbar #logo {
-        float: left;
-        margin-right: auto;
-        padding: 0px 15px;
-        color: black;
+        background-color: #333;
       }
 
       /* Style the navigation bar links */
       .navbar a {
-        color: black;
-        padding: 14px 20px 0px 0px;
+        color: white;
+        padding: 14px 20px;
         text-decoration: none;
         text-align: center;
-        height: 100%;
       }
 
       /* Change color on hover */
@@ -116,143 +53,32 @@
         color: black;
       }
 
-      .fullpage {
+      /* Column container */
+      .row {
         display: flex;
+        flex-wrap: wrap;
       }
 
+      /* Create two unequal columns that sits next to each other */
+      /* Sidebar/left column */
+      .side {
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      /* Main column */
       .main {
-        flex: 3;
-
-        width: 100%;
+        flex: 70%;
         background-color: white;
-        padding: 0px 20px;
+        padding: 20px;
       }
 
-      .no-bullets {
-        list-style: none;
-      }
-
-      .fold {
-        text-align: center;
-        /* background-color: #22577a; */
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.245),
-            rgba(0, 0, 0, 0.244)
-          ),
-          url(images/image4.jpg);
-        background-repeat: no-repeat;
-        height: 100%;
+      /* Fake image, just for this example */
+      .fakeimg {
+        background-color: #aaa;
         width: 100%;
-        background-size: cover;
-        background-color: #fff; /* backup color */
-        background-repeat: repeat; /* repeat the image */
-        background-position: center center; /* position the image in the center */
-        color: white;
-        padding: 105px 150px 15px 00px;
-        /* display: flex; */
-        align-items: center;
-      }
-
-      .fold h1 {
-        font-size: 75px;
-      }
-
-      .profile_image {
-        /* margin-right: 40px; */
-        display: flex;
-        justify-content: center; /* centers content horizontally */
-        align-items: center; /* centers content vertically */
-      }
-
-      #ResumeImage img {
-        display: flex;
-        /* margin-bottom: 0px;
-        margin-left: 20px; */
-
-        /* right: 25px; */
-        border: #f1f1f1 solid 15p;
-        /* margin: 0px 20px 0px 0px; */
-        padding: 0x;
-        border-radius: 250px;
-        /* background-color: white; */
-        border: 8px solid white;
-        /* transform: rotate(3deg); */
-        /* z-index: 3; */
-        align-content: center;
-      }
-
-      .sidebar {
-        /* flex: 0 0 250px; */
-        background-color: #57cc99;
-        color: white;
-        flex: 0.7;
-        text-align: right;
-        padding-right: 15px;
-        padding-left: 15px;
-        border-bottom: #57cc99 4px solid;
-      }
-      @media screen and (max-width: 760px) {
-        .sidebar {
-          display: none;
-        }
-      }
-
-      .experience {
-        padding: 30px 0px;
-      }
-
-      .main-sections {
-        padding: 30px 0px;
-      }
-
-      .sub-section {
-        padding: 10px 0px;
-      }
-
-      .contentpage {
-        padding-left: 30px;
-        border-bottom: #57cc99 4px solid;
-        padding-right: 30px;
-      }
-
-      .contentSections {
-        height: 30vh;
-      }
-
-      Footer {
-        padding: 20px 50px;
-        height: 750px;
-        background-color: #09161f;
-        color: white;
-      }
-      @media screen and (max-width: 760px) {
-        footer {
-          padding: 0px;
-        }
-      }
-
-      #icons {
-        text-align: center;
-        display: flex;
-
-        justify-content: flex-start;
-      }
-
-      #icons img {
-        width: 100px;
-
-        padding: 0px 15px;
-      }
-
-      .backtotopimage {
-        width: 50px;
-        height: 50px;
-        filter: invert(99%) sepia(99%) saturate(99%) hue-rotate(0deg)
-          brightness(100%) contrast(100%);
-        box-shadow: 5px 10px;
-      }
-      .sticky {
-        width: 1190px;
+        padding: 20px;
       }
 
       .backtotop {
@@ -269,18 +95,31 @@
         display: block;
         opacity: 1;
       }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
+
+      /* Footer */
+      .footer {
+        display: flex;
+        flex-wrap: nowrap;
         padding: 20px;
+        text-align: center;
+        background: #ddd;
+        width: 100%;
       }
-      @media screen and (max-width: 760px) {
-        .container {
-          padding: 0px;
+      .footer_container {
+        width: 500px;
+        margin: 0px auto;
+      }
+
+      /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 700px) {
+        .row,
+        .navbar {
+          flex-direction: column;
         }
       }
 
       form {
+        /* width:  600px; */
         /* background-color: #f2f2f2; */
         border-radius: 5px;
         padding: 20px;
@@ -317,8 +156,8 @@
         input[type="text"],
         input[type="email"],
         textarea {
-          padding: 0px;
-          width: 50%;
+          padding: 12px;
+          width: 100%;
         }
       }
       label {
@@ -353,269 +192,220 @@
         padding: 10px;
         margin-top: 20px;
       }
-
-      /* For desktop */
-      @media (min-width: 992px) {
-        .icons-lines {
-          display: inline-block;
-          margin-right: 20px; /* add some margin between icons */
-        }
-      }
-
-      /* For tablet */
-      @media (min-width: 768px) and (max-width: 991px) {
-        .icons-lines {
-          display: inline-block;
-          margin-right: 10px; /* add some margin between icons */
-        }
-      }
-
-      /* For mobile */
-      @media (max-width: 767px) {
-        .icons-lines {
-          display: block;
-          margin-bottom: 10px; /* add some margin between icons */
-        }
-      }
-
-      .main_work_content{
-        background-color: red;
+      .icons {
         display: flex;
+        flex-wrap: wrap;
       }
-
-      .sidebar_info{
-        background: green;
+      .icons-lines {
+        text-align: center;
+        flex: 1;
       }
     </style>
   </head>
-
   <body>
-    <article>
-      <header id="back_to_top">
-        <aside>
-          <div class="menu sticky">
-            <div class="navbar">
-              <div id="logo">
-                <h2>Ruan Pienaar</h2>
-              </div>
-              <div class="menuitems">
-                <a href="#section1">Experience</a>
-                <a href="#section2">Education</a>
-                <a href="#section3">Skills</a>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </header>
-      <div class="fold">
-        <div class="profile_image">
-          <!-- <img src="images\ruan3.jpg" width="195px" id="ResumeImage" /> -->
-          <picture id="ResumeImage">
-            <!-- Original image for laptop-sized screens and bigger -->
-            <source
-              srcset="images\ruan2.jpg"
-              media="(min-width: 1024px)"
-              width="195px"
-            />
-            <!-- Head and shoulders image for tablet-sized screens -->
-            <source
-              srcset="images\ruan3.jpg"
-              media="(min-width: 768px)"
-              width="195px"
-            />
-            <!-- Face image for mobile-sized screens -->
-            <img src="images\ruan4.jpg" alt="Image of a person" width="195px" />
-          </picture>
+    <!-- Note -->
+
+    <!-- Header -->
+    <div class="header">
+      <div class="profile_image">
+        <!-- <img src="images\ruan3.jpg" width="195px" id="ResumeImage" /> -->
+        <picture id="ResumeImage">
+          <!-- Original image for laptop-sized screens and bigger -->
+          <source
+            srcset="images\ruan2.jpg"
+            media="(min-width: 1024px)"
+            width="195px"
+          />
+          <!-- Head and shoulders image for tablet-sized screens -->
+          <source
+            srcset="images\ruan3.jpg"
+            media="(min-width: 768px)"
+            width="195px"
+          />
+          <!-- Face image for mobile-sized screens -->
+          <img src="images\ruan4.jpg" alt="Image of a person" width="195px" />
+        </picture>
+      </div>
+      <h1>Ruan Pienaar</h1>
+      <p>Resume</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="#section1">Experience</a>
+      <a href="#section2">Education</a>
+      <a href="#section3">Skills</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+      <div class="side">
+        <h2>Experience</h2>
+      </div>
+      <div class="main">
+        <h2 id="section1"></h2>
+        <h3>Web Developer</h3>
+        <div class="sub-section">
+          <h4>
+            <a href="http://joshgen.co.za/"
+              >Joshua Generation Church · Full-time</a
+            >
+          </h4>
+          <p>Feb 2015 - Jul 2020 · 5yrs 6mos</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
-        <!-- <h1>Ruan Mighail Pienaar</h1> -->
-        <div>
-          <h1>Resume</h1>
-          <p>Web Developer at Joshua Generation Church</p>
+        <div class="sub-section">
+          <h4><a href="http://redpeak.co.za/">RED PEAK Design</a></h4>
+          <p>Jul 2020 - Present · 2 yrs 8 mos</p>
+          <p>
+            I am the owner of Red Peak Design. I work with clients to create
+            design and development solutions for their business. I put pride in
+            each project and in seeing my clients establish their brands and
+            business growth. Equipping businesses and people to take their
+            business to the next peak.
+          </p>
         </div>
       </div>
 
-          
-            
-            <div class="main_work_content">
-              <div class="section_experience">
-              <div class="sidebar_info">
-                <h2 id="section1">Experience</h2>
-                
-              </div>
-              <div class="experience_content">
-              <h3>Web Developer</h3>
-              <div class="sub-section">
-                <h4>
-                  <a href="http://joshgen.co.za/"
-                    >Joshua Generation Church · Full-time</a
-                  >
-                </h4>
-                <p>Feb 2015 - Jul 2020 · 5yrs 6mos</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
-              <div class="sub-section">
-                <h4><a href="http://redpeak.co.za/">RED PEAK Design</a></h4>
-                <p>Jul 2020 - Present · 2 yrs 8 mos</p>
-                <p>
-                  I am the owner of Red Peak Design. I work with clients to
-                  create design and development solutions for their business. I
-                  put pride in each project and in seeing my clients establish
-                  their brands and business growth. Equipping businesses and
-                  people to take their business to the next peak.
-                </p>
-              
-            </div>
-            </div>
-            <h2 id="section2">Education</h2>
-            <div class="main-sections">
-              <div class="sub-section">
-                <h4>
-                  <a href="https://theanimationschool.co.za/"
-                    >The Animation School</a
-                  >
-                </h4>
-                <p>
-                  National Certificate, Animation, Interactive Technology, Video
-                  Graphics and Special Effects
-                </p>
-              </div>
-              <div class="sub-section">
-                <h4>Commando Training Centre Royal Marines</h4>
-                <p>
-                  The first weeks of training are spent learning basic skills
-                  that will be used later. This includes much time spent on the
-                  parade ground and on the rifle ranges. The long history of the
-                  Royal Marines is also highlighted through a visit to the Royal
-                  Marines Museum in Southsea, Hampshire. Physical training at
-                  this stage emphasizes all-round physical strength, endurance
-                  and flexibility in order to develop the muscles necessary to
-                  carry the heavy equipment a marine will use in an operational
-                  unit. Key milestones include a gym passout at week 9 (not
-                  carried out with fighting order), a battle swimming test, and
-                  learning to do a "regain" (i.e. climb back onto a rope
-                  suspended over a water tank). Most of these tests are
-                  completed wearing fighting order of 32 lb (14.5 kg) of
-                  Personal Load Carrying Equipment. Individual fieldcraft skills
-                  are also taught at this basic stage.
-                </p>
-              </div>
-            </div>
-            <h2 id="section3">Skills</h2>
-            <section>
-              <div class="main-sections">
-                <ul>
-                  <div id="icons">
-                    <div class="icons-lines">
-                      <img src="images/128/html.png" />
-                      <p>HTML&CSS</p>
-                    </div>
-                    <div class="icons-lines">
-                      <img src="images/128/css.png" />
-                      <p>CSS</p>
-                    </div>
-                    <div class="icons-lines">
-                      <img src="images/128/js.png" />
-                      <p>JavaScript</p>
-                    </div>
-                    <div>
-                      <img src="images/128/github.png" />
-                      <p>Git/Github</p>
-                    </div>
+      <div class="side">
+        <h2>Education</h2>
+      </div>
+      <div class="main">
+        <h2 id="section2"></h2>
 
-                    <div class="icons-lines">
-                      <img src="images/128/wordpress.png" />
-                      <p>Wordpress</p>
-                    </div>
-                    <div class="icons-lines">
-                      <img src="images/128/ps.png" />
-                      <p>Photoshop</p>
-                    </div>
-                    <div class="icons-lines">
-                      <img src="images/128/ai.png" />
-                      <p>Illustrator</p>
-                    </div>
-                    <div class="icons-lines">
-                      <img src="images/128/trello.png" />
-                      <p>Trello</p>
-                    </div>
-                  </div>
-                </ul>
-              </div>
-             </div>
-
-      <footer>
-        <div class="container">
-          <h1>Contact Me</h1>
-          <p><a href="https://www.linkedin.com/in/ruan3d/">Linkedin</a></p>
-          <form
-            id="contact-form"
-            method="POST"
-            action="https://formsubmit.co/ruanmpienaar@gmail.com"
-          >
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            /><span class="required"> Required</span>
-            <label for="message">Purpose of Messaging</label>
-            <select id="purpose" name="purpose" required>
-              <option value="">--Please select a purpose--</option>
-              <option value="Hire">Hire</option>
-              <option value="Ask a Question">Question</option>
-              <option value="Recruiter">Mexico</option>
-              <option value="Head Hunting">UK</option>
-              <!-- Add more countries as needed --></select
-            ><span class="required"> Required</span>
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message"
-              required
-            ></textarea>
-            <button type="submit">Submit</button>
-          </form>
+        <div class="sub-section">
+          <h4>
+            <a href="https://theanimationschool.co.za/">The Animation School</a>
+          </h4>
+          <p>
+            National Certificate, Animation, Interactive Technology, Video
+            Graphics and Special Effects
+          </p>
         </div>
-      </footer>
+        <div class="sub-section">
+          <h4>Commando Training Centre Royal Marines</h4>
+          <p>
+            The first weeks of training are spent learning basic skills that
+            will be used later. This includes much time spent on the parade
+            ground and on the rifle ranges. The long history of the Royal
+            Marines is also highlighted through a visit to the Royal Marines
+            Museum in Southsea, Hampshire. Physical training at this stage
+            emphasizes all-round physical strength, endurance and flexibility in
+            order to develop the muscles necessary to carry the heavy equipment
+            a marine will use in an operational unit. Key milestones include a
+            gym passout at week 9 (not carried out with fighting order), a
+            battle swimming test, and learning to do a "regain" (i.e. climb back
+            onto a rope suspended over a water tank). Most of these tests are
+            completed wearing fighting order of 32 lb (14.5 kg) of Personal Load
+            Carrying Equipment. Individual fieldcraft skills are also taught at
+            this basic stage.
+          </p>
+        </div>
+      </div>
+
+      <div class="side">
+        <h2>Skills</h2>
+      </div>
+      <div class="main">
+        <h2 id="section3"></h2>
+        <div class="sub-section">
+          <div class="icons">
+            <div class="icons-lines">
+              <img src="images/128/html.png" />
+              <p>HTML&CSS</p>
+            </div>
+            <div class="icons-lines">
+              <img src="images/128/css.png" />
+              <p>CSS</p>
+            </div>
+            <div class="icons-lines">
+              <img src="images/128/js.png" />
+              <p>JavaScript</p>
+            </div>
+            <div class="icons-lines">
+              <img src="images/128/github.png" />
+              <p>Git/Github</p>
+            </div>
+
+            <div class="icons-lines">
+              <img src="images/128/wordpress.png" />
+              <p>Wordpress</p>
+            </div>
+            <div class="icons-lines">
+              <img src="images/128/ps.png" />
+              <p>Photoshop</p>
+            </div>
+            <div class="icons-lines">
+              <img src="images/128/ai.png" />
+              <p>Illustrator</p>
+            </div>
+            <div class="icons-lines">
+              <img src="images/128/trello.png" />
+              <p>Trello</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer_container">
+        <h1>Contact Me</h1>
+        <p><a href="https://www.linkedin.com/in/ruan3d/">Linkedin</a></p>
+        <form
+          id="contact-form"
+          method="POST"
+          action="https://formsubmit.co/ruanmpienaar@gmail.com"
+        >
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          /><span class="required"> Required</span>
+          <label for="message">Purpose of Messaging</label>
+          <select id="purpose" name="purpose" required>
+            <option value="">--Please select a purpose--</option>
+            <option value="Hire">Hire</option>
+            <option value="Ask a Question">Question</option>
+            <option value="Recruiter">Mexico</option>
+            <option value="Head Hunting">UK</option>
+            <!-- Add more countries as needed --></select
+          ><span class="required"> Required</span>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
     <div class="backtotop">
       <a href="#back_to_top"
         ><img class="backtotopimage" src="images/64/arrow_up_icon.png" /><img
       /></a>
     </div>
   </body>
-
-  <script>
-    window.addEventListener("scroll", function () {
-      const backtotop = document.querySelector(".backtotop");
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const threshold = windowHeight / 2;
-
-      if (scrollPosition > threshold) {
-        backtotop.classList.add("show");
-      } else {
-        backtotop.classList.remove("show");
-      }
-    });
-  </script>
 </html>
